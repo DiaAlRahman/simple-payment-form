@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Payment Form</title>
+</head>
+
+<body>
+    <form action="https://httpbin.org/post" method="post">
+        <h1>Payment Form</h1>
+        <p>Required field are followed by *.</p>
+
+        <section>
+            <h2>Contact Information</h2>
+            <fieldset>
+                <legend>Title</legend>
+                <ul id="title">
+                    <!-- Radio buttons must have the same name, so that they belong to the same group. -->
+                    <li>
+                        <input type="radio" id="ace" name="title" value="ace" checked>
+                        <label for="ace">Ace</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="king" name="title" value="king">
+                        <label for="king">King</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="queen" name="title" value="queen">
+                        <label for="queen">Queen</label>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li><label for="name">Name: <span aria-required="required">*</span></label></li>
+                    <li><input type="text" id="name" name="user_name"></li>
+
+                    <li> <label for="mail">E-mail: <span aria-required="required">*</span></label></li>
+                    <li> <input type="email" id="mail" name="user_mail"></li>
+
+                    <li> <label for="pass">Password: <span aria-required="required">*</span></label></li>
+                    <li> <input type="password" id="pass" name="pass"></li>
+                </ul>
+            </fieldset>
+
+        </section>
+
+        <section>
+            <h2>Payment Information</h2>
+
+            <ul>
+                <li> <label for="card-type">Card type: </label></li>
+                <li>
+                    <select name="card-type" id="card-type">
+                        <option value="visa" name="visa">Visa</option>
+                        <option value="mastercard" name="mastercard">Mastercard</option>
+                        <option value="american express" name="american express">American Express</option>
+                    </select>
+                </li>
+
+                <li> <label for="card-number">Card Number: <span aria-required="required">*</span></label></li>
+                <li> <input type="number" id="" name="card-number"></li>
+
+                <li> <label for="exp-date">Expiration Date: <span aria-required="required">*</span></label></li>
+                <li> <input type="month" id="exp-date" name="exp-date"></li>
+            </ul>
+
+        </section>
+
+        <button type="submit">Pay Now</button>
+
+    </form>
+</body>
+
+</html>
